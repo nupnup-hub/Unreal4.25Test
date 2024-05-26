@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-IndirectTexturePlugin.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Unreal\PubgTest\Intermediate\Build\Win64\PubgTestEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePlugin\Module.IndirectTexturePlugin.cpp.obj"
+"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePlugin\Module.IndirectTexturePlugin.gen.cpp.obj"
+"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePlugin\Default.rc2.res"
+/OUT:"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePlugin\UE4Editor-IndirectTexturePlugin.lib"
+/INCLUDE:IMPLEMENT_MODULE_IndirectTexturePlugin

@@ -1,0 +1,8 @@
+{
+	"BuildId": "13144385",
+	"Modules": 
+	{
+		"IndirectTexturePlugin": "UE4Editor-IndirectTexturePlugin.dll",
+		"IndirectTexturePluginEditor": "UE4Editor-IndirectTexturePluginEditor.dll"
+	}
+}

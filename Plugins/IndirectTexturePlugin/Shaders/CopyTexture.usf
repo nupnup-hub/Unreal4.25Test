@@ -1,0 +1,14 @@
+#include "/Engine/Public/Platform.ush"
+float2 InputDimention;
+Texture2D InputTexture;
+RWTexture2D<float4> OutputTexture;
+SamplerState SamLinearClamp;
+ 
+[numthreads(16, 16, 1)]
+void Main(uint3 dispatchThreadID : SV_DispatchThreadID)
+{
+    if (dispatchThreadID.x >= InputDimention.x || dispatchThreadID.y >= InputDimention.y)
+        return;
+          
+    OutputTexture[dispatchThreadID.xy] = InputTexture[dispatchThreadID.xy];
+}

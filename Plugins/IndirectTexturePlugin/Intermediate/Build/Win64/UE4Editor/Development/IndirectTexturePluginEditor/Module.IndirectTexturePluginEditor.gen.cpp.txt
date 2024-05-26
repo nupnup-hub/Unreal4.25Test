@@ -1,0 +1,7 @@
+D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePluginEditor\Definitions.IndirectTexturePluginEditor.h
+D:/Unreal/PubgTest/Plugins/IndirectTexturePlugin/Intermediate/Build/Win64/UE4Editor/Inc/IndirectTexturePluginEditor/IndirectTextureFactory.gen.cpp
+D:\Unreal\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\Unreal\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor/Public/IndirectTextureFactory.h
+D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Inc\IndirectTexturePluginEditor\IndirectTextureFactory.generated.h
+D:/Unreal/PubgTest/Plugins/IndirectTexturePlugin/Intermediate/Build/Win64/UE4Editor/Inc/IndirectTexturePluginEditor/IndirectTexturePluginEditor.init.gen.cpp

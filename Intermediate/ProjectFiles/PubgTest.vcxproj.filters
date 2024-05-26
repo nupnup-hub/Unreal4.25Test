@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\PubgTest.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{3DF50502-6795-4C48-B67B-D8901D52B120}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\PubgTest.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\PubgTestEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{E019007A-37E2-4038-8805-AAF271865B1D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{837E46D4-1A46-4AEA-AA8A-4B6B7DEEC279}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\IndirectTexturePlugin">
+      <UniqueIdentifier>{ED7B9544-584A-4CC3-BC28-23AA23CBEBD7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\IndirectTexturePlugin\Source">
+      <UniqueIdentifier>{832992B3-1E3D-450F-AD30-F06F98920F77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin">
+      <UniqueIdentifier>{3C93AE99-54D4-4635-BEB8-31FA3FD9F729}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\IndirectTexturePlugin.Build.cs">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin</Filter>
+    </None>
+    <Filter Include="Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Private">
+      <UniqueIdentifier>{1E0EDFE6-EEEA-4810-B849-9677046AB150}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Private\GlobalComputeShader.cpp">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Private\IndirectTexture.cpp">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Private\IndirectTexturePlugin.cpp">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Private\IndirectTextureSample.cpp">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Public">
+      <UniqueIdentifier>{838C5F61-AB1D-46BA-9F51-C3DFF6A69D0F}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Public\GlobalComputeShader.h">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Public\IndirectTexture.h">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Public\IndirectTexturePlugin.h">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Public\IndirectTextureSample.h">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Public</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\IndirectTexturePlugin\IndirectTexturePlugin.uplugin">
+      <Filter>Plugins\IndirectTexturePlugin</Filter>
+    </None>
+    <Filter Include="Plugins\IndirectTexturePlugin\Resources">
+      <UniqueIdentifier>{E30D2E9D-C337-41A3-A26C-3C8134D3A6C1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\IndirectTexturePlugin\Resources\Icon128.png">
+      <Filter>Plugins\IndirectTexturePlugin\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\IndirectTexturePlugin\Shaders">
+      <UniqueIdentifier>{625C5234-DB63-4419-8A8F-994A7F1A2957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor">
+      <UniqueIdentifier>{98150BE8-5203-411C-8E53-B63D104E6431}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\IndirectTexturePluginEditor.Build.cs">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor</Filter>
+    </None>
+    <Filter Include="Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Private">
+      <UniqueIdentifier>{94281728-48FD-40DE-BB06-01008983D71F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Private\IndirectTextureAssetTypeAction.cpp">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Private\IndirectTextureFactory.cpp">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Private\IndirectTexturePluginEditor.cpp">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Private\IndirectTextureThumbnailRenderer.cpp">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Public">
+      <UniqueIdentifier>{3900086B-F115-4425-AD1E-D72C7A8BB5C9}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Public\IndirectTextureAssetTypeAction.h">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Public\IndirectTextureFactory.h">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Public\IndirectTexturePluginEditor.h">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Public\IndirectTextureThumbnailRenderer.h">
+      <Filter>Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\PubgTest">
+      <UniqueIdentifier>{DCA48C8B-FADA-4D24-90F6-445B4C59781D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\PubgTest\PubgTest.Build.cs">
+      <Filter>Source\PubgTest</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\PubgTest\PubgTest.cpp">
+      <Filter>Source\PubgTest</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PubgTest\PubgTest.h">
+      <Filter>Source\PubgTest</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PubgTest\PubgTestGameModeBase.cpp">
+      <Filter>Source\PubgTest</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PubgTest\PubgTestGameModeBase.h">
+      <Filter>Source\PubgTest</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\IndirectTexturePlugin\Shaders\ScalingTexture.usf">
+      <Filter>Plugins\IndirectTexturePlugin\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

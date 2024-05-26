@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.IndirectTexturePluginEditor.cpp.obj": [
+			"IndirectTextureAssetTypeAction.cpp.obj",
+			"IndirectTextureFactory.cpp.obj",
+			"IndirectTexturePluginEditor.cpp.obj",
+			"IndirectTextureThumbnailRenderer.cpp.obj"
+		],
+		"Module.IndirectTexturePluginEditor.gen.cpp.obj": [
+			"IndirectTextureFactory.gen.cpp.obj",
+			"IndirectTexturePluginEditor.init.gen.cpp.obj"
+		]
+	}
+}
