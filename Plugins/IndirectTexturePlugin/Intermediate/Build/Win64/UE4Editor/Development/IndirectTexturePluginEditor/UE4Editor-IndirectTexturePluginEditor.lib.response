@@ -7,11 +7,7 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "D:\Unreal\PubgTest\Intermediate\Build\Win64\PubgTestEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.obj"
-"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePluginEditor\IndirectTexturePluginEditor.cpp.obj"
-"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePluginEditor\IndirectTextureThumbnailRenderer.cpp.obj"
 "D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePluginEditor\Module.IndirectTexturePluginEditor.cpp.obj"
-"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePluginEditor\IndirectTexturePluginEditor.init.gen.cpp.obj"
-"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePluginEditor\IndirectTextureThumbnailRenderer.gen.cpp.obj"
 "D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePluginEditor\Module.IndirectTexturePluginEditor.gen.cpp.obj"
 "D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePluginEditor\Default.rc2.res"
 /OUT:"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePluginEditor\UE4Editor-IndirectTexturePluginEditor.lib"

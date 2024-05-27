@@ -4,3 +4,9 @@ D:\Unreal\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppI
 D:\Unreal\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor/Public/IndirectTextureFactory.h
 D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Inc\IndirectTexturePluginEditor\IndirectTextureFactory.generated.h
+D:/Unreal/PubgTest/Plugins/IndirectTexturePlugin/Intermediate/Build/Win64/UE4Editor/Inc/IndirectTexturePluginEditor/IndirectTexturePluginEditor.init.gen.cpp
+D:/Unreal/PubgTest/Plugins/IndirectTexturePlugin/Intermediate/Build/Win64/UE4Editor/Inc/IndirectTexturePluginEditor/IndirectTextureThumbnailRenderer.gen.cpp
+D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Source\IndirectTexturePluginEditor/Public/IndirectTextureThumbnailRenderer.h
+D:\Unreal\UE_4.25\Engine\Source\Editor\UnrealEd\Classes\ThumbnailRendering/ThumbnailRenderer.h
+D:\Unreal\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\ThumbnailRenderer.generated.h
+D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Inc\IndirectTexturePluginEditor\IndirectTextureThumbnailRenderer.generated.h

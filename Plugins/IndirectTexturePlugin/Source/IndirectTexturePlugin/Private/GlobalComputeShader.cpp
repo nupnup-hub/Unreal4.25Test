@@ -112,8 +112,9 @@ void FIndirectCSHandler::Execute(FRHICommandListImmediate& RHICmdList, class FSc
 
 	//Texture Size is definitely a power of 2
 	const bool IsSameResolution = SourceSize == RenderTargetSize;
-	const uint32 ComputeCount = !IsSameResolution ? FMath::Max(abs(log2(SourceSize.X) - log2(RenderTargetSize.X)), abs(log2(SourceSize.Y) - log2(RenderTargetSize.Y))) : 1;
-	 
+	const uint32 MaxLog = FMath::Max(abs(log2(SourceSize.X) - log2(RenderTargetSize.X)), abs(log2(SourceSize.Y) - log2(RenderTargetSize.Y)));
+	const uint32 ComputeCount = FMath::Max(MaxLog, (uint32)1);
+ 
 	TArray<FIntPoint> RtResolution;
 	FIntPoint AllocateRenderTargetSize = SourceSize;
 	EPixelFormat Format = Params.RenderTarget->GetRenderTargetResource()->TextureRHI->GetFormat();
