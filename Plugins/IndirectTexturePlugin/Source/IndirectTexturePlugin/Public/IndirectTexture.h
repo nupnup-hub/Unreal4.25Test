@@ -10,8 +10,17 @@
 /**
  *
  */
+
+enum class INDIRECT_TEXTURE_EVENT
+{
+	INDIRECT_TEXTURE_CREATION,
+	OPTION_CHAGED,
+	COUNT
+};
+
 class UTexture;
 class UTextureRenderTarget2D;
+DECLARE_DELEGATE_OneParam(FIndirectTextureEventDelegate, const INDIRECT_TEXTURE_EVENT);
 UCLASS()
 class INDIRECTTEXTUREPLUGIN_API UIndirectTexture final: public UObject
 {
@@ -33,6 +42,8 @@ private:
 	FDelegateHandle InitializeDelHandle;
 	FDelegateHandle UpdateIndirectTextureDelHandle;
 	FDelegateHandle DestroyRtDelHandle;
+private:
+	TArray<FIndirectTextureEventDelegate*> EventListener;
 private:
 	bool AllowOverlapValue = false;
 	bool CanUseIndirectTexture = false;
@@ -64,6 +75,11 @@ public:
 public:
 	bool HasValidSource()const;
 	bool IsActivatedShader()const;
+public:
+	int32 RegisterIndirectTextureEvent(const INDIRECT_TEXTURE_EVENT EvType, FIndirectTextureEventDelegate* Handle);
+	int32 DeRegisterIndirectTextureEvent(const INDIRECT_TEXTURE_EVENT EvType, FIndirectTextureEventDelegate* Handle);
+private:
+	void NotifyEvent(const INDIRECT_TEXTURE_EVENT EvType);
 public:
 	void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) final;
 private:

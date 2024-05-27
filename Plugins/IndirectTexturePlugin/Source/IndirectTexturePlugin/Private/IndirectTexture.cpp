@@ -10,9 +10,7 @@ UIndirectTexture::UIndirectTexture()
 	InitializeDelHandle = FCoreDelegates::OnBeginFrame.AddUObject(this, &UIndirectTexture::Initialize); 
 }
 UIndirectTexture::~UIndirectTexture()
-{
-	if (IndirectTexture != nullptr)
-		IndirectTexture->RemoveFromRoot();
+{ 
 }
 void UIndirectTexture::Initialize()
 {
@@ -58,6 +56,7 @@ void UIndirectTexture::SetSource(UTexture2D* NewSource)
 void UIndirectTexture::SetTileSetCount(int32 NewTileSetCount)
 {
 	TileSetCount = NewTileSetCount;
+	NotifyEvent(INDIRECT_TEXTURE_EVENT::OPTION_CHAGED);
 }
 void UIndirectTexture::SetIndirectResolution(const FIntPoint NewIndirectResolution)
 {
@@ -76,6 +75,19 @@ bool UIndirectTexture::HasValidSource()const
 bool UIndirectTexture::IsActivatedShader()const
 {
 	return CSHandler.IsRegistered();
+}
+int32 UIndirectTexture::RegisterIndirectTextureEvent(const INDIRECT_TEXTURE_EVENT EvType, FIndirectTextureEventDelegate* Handle)
+{
+	return EventListener.Add(Handle);
+}
+int32 UIndirectTexture::DeRegisterIndirectTextureEvent(const INDIRECT_TEXTURE_EVENT EvType, FIndirectTextureEventDelegate* Handle)
+{
+	return EventListener.Remove(Handle);
+}
+void UIndirectTexture::NotifyEvent(const INDIRECT_TEXTURE_EVENT EvType)
+{
+	for (const auto& data : EventListener)
+		data->Execute(EvType);
 }
 void UIndirectTexture::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
@@ -133,15 +145,14 @@ void UIndirectTexture::UpdateIndirectTexture()
 	if (IndirectRt == nullptr || !IndirectRt->IsValidLowLevel())
 		return; 
 
-	FlushRenderingCommands();
-	if (IndirectTexture != nullptr)
-		IndirectTexture->RemoveFromRoot();
-
+	FlushRenderingCommands(); 
 	IndirectTexture = IndirectRt->ConstructTexture2D(this, Source->GetName() + TEXT("IndirectTexture"), EObjectFlags::RF_Public);
 	FCoreDelegates::OnBeginFrame.Remove(UpdateIndirectTextureDelHandle);
 	UpdateIndirectTextureDelHandle.Reset();
 	DeActivateShader();
 	CanUseIndirectTexture = true;
+
+	NotifyEvent(INDIRECT_TEXTURE_EVENT::INDIRECT_TEXTURE_CREATION);
 }
 void UIndirectTexture::RegisterUpdateIndirectTextureDelHandle()
 { 

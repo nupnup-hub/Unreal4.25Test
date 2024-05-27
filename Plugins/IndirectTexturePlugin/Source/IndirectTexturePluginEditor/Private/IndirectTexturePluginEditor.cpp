@@ -22,7 +22,7 @@ void FIndirectTexturePluginEditorModule::StartupModule()
 	EAssetTypeCategories::Type bit = AssetTools.RegisterAdvancedAssetCategory(CategoriesKey, CategoriesDisplayName);
 	RegisterAssetTypeAction(AssetTools, MakeShareable(new FIndirectTextureAssetTypeAction(bit, AssetName)));
  
-	///UThumbnailManager::Get().RegisterCustomRenderer(UIndirectTexture::StaticClass(), UIndirectTextureThumbnailRenderer::StaticClass());
+	UThumbnailManager::Get().RegisterCustomRenderer(UIndirectTexture::StaticClass(), UIndirectTextureThumbnailRenderer::StaticClass());
 }
 void FIndirectTexturePluginEditorModule::ShutdownModule()
 {
@@ -32,7 +32,6 @@ void FIndirectTexturePluginEditorModule::ShutdownModule()
 		AssetTools.UnregisterAssetTypeActions(IndirectionAssetTypeActions.ToSharedRef());
 	}
 	IndirectionAssetTypeActions.Reset();
-
 	//UThumbnailManager::Get().UnregisterCustomRenderer(UIndirectTexture::StaticClass());
 }
 void FIndirectTexturePluginEditorModule::RegisterAssetTypeAction(IAssetTools& AssetTools, TSharedRef<IAssetTypeActions> Action)

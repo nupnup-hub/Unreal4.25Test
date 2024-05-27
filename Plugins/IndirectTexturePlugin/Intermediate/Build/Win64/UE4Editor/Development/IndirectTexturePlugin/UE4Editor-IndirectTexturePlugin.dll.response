@@ -34,6 +34,9 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "D:\Unreal\PubgTest\Intermediate\Build\Win64\PubgTestEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePlugin\GlobalComputeShader.cpp.obj"
+"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePlugin\IndirectTexture.cpp.obj"
+"D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePlugin\IndirectTextureSample.cpp.obj"
 "D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePlugin\Module.IndirectTexturePlugin.cpp.obj"
 "D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePlugin\Module.IndirectTexturePlugin.gen.cpp.obj"
 "D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePlugin\Default.rc2.res"

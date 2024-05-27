@@ -1,6 +1,5 @@
 D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Development\IndirectTexturePlugin\Definitions.IndirectTexturePlugin.h
 D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Public\IndirectTextureSample.h
-D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Inc\IndirectTexturePlugin\IndirectTextureSample.generated.h
 D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Source\IndirectTexturePlugin\Public\IndirectTexture.h
 D:\Unreal\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
 D:\Unreal\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
@@ -13,6 +12,7 @@ D:\Unreal\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/TextureRenderTarge
 D:\Unreal\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TextureRenderTarget.generated.h
 D:\Unreal\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TextureRenderTarget2D.generated.h
 D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Inc\IndirectTexturePlugin\IndirectTexture.generated.h
+D:\Unreal\PubgTest\Plugins\IndirectTexturePlugin\Intermediate\Build\Win64\UE4Editor\Inc\IndirectTexturePlugin\IndirectTextureSample.generated.h
 D:\Unreal\UE_4.25\Engine\Source\Runtime\Engine\Public\MaterialCompiler.h
 D:\Unreal\UE_4.25\Engine\Source\Runtime\Engine\Classes\Materials/MaterialExpressionSpeedTree.h
 D:\Unreal\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MaterialExpressionSpeedTree.generated.h

@@ -6,6 +6,7 @@
 #include "Modules/ModuleManager.h"
 
 class IAssetTypeActions;
+class IAssetTools;
 class FIndirectTexturePluginEditorModule final : public IModuleInterface
 {
 private:

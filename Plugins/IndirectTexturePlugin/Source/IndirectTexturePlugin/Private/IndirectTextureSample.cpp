@@ -1,8 +1,7 @@
 ﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "IndirectTextureSample.h"
-#include "IndirectTexture.h" 
+#include "IndirectTextureSample.h" 
 #include "Materials/Material.h"
 #include "MaterialCompiler.h"    
 #include "Materials/MaterialExpressionScreenPosition.h"
@@ -145,10 +144,12 @@ UMaterialExpressionIndirectTextureSample::UMaterialExpressionIndirectTextureSamp
     :UMaterialExpression(ObjectInitializer)
 {
     Set.Initialize();
+    IndirectEventDel.BindUObject(this, &UMaterialExpressionIndirectTextureSample::NotifyIndirectTextureEvent);
 }
 
 UMaterialExpressionIndirectTextureSample::~UMaterialExpressionIndirectTextureSample()
 {
+    IndirectEventDel.Unbind();
     Set.Clear();
 }
 UIndirectTexture* UMaterialExpressionIndirectTextureSample::GetIndirectTexture()const
@@ -161,7 +162,18 @@ UObject* UMaterialExpressionIndirectTextureSample::GetReferencedTexture()const
 }
 void UMaterialExpressionIndirectTextureSample::SetIndirectTexture(UIndirectTexture* NewIndirectTexture)
 {
+    if (IndirectTexture != nullptr)
+    {
+        IndirectTexture->DeRegisterIndirectTextureEvent(INDIRECT_TEXTURE_EVENT::INDIRECT_TEXTURE_CREATION, &IndirectEventDel);
+        IndirectTexture->DeRegisterIndirectTextureEvent(INDIRECT_TEXTURE_EVENT::OPTION_CHAGED, &IndirectEventDel);
+    }
     IndirectTexture = NewIndirectTexture;
+
+    if (IndirectTexture != nullptr)
+    {
+        IndirectTexture->RegisterIndirectTextureEvent(INDIRECT_TEXTURE_EVENT::INDIRECT_TEXTURE_CREATION, &IndirectEventDel);
+        IndirectTexture->RegisterIndirectTextureEvent(INDIRECT_TEXTURE_EVENT::OPTION_CHAGED, &IndirectEventDel);
+    }
 }
 bool UMaterialExpressionIndirectTextureSample::CanReferenceTexture() const
 {
@@ -170,6 +182,28 @@ bool UMaterialExpressionIndirectTextureSample::CanReferenceTexture() const
 bool UMaterialExpressionIndirectTextureSample::IsValidTexture(UTexture* Texture)const
 {
     return Texture != nullptr && Texture->Resource != nullptr && Texture->GetMaterialType() == MCT_Texture2D;
+}
+void UMaterialExpressionIndirectTextureSample::BeginDestroy()
+{
+    SetIndirectTexture(nullptr);
+    Super::BeginDestroy();
+}
+void UMaterialExpressionIndirectTextureSample::PostLoad()
+{
+    Super::PostLoad();
+    if (IndirectTexture != nullptr)
+    {
+        IndirectTexture->RegisterIndirectTextureEvent(INDIRECT_TEXTURE_EVENT::INDIRECT_TEXTURE_CREATION, &IndirectEventDel);
+        IndirectTexture->RegisterIndirectTextureEvent(INDIRECT_TEXTURE_EVENT::OPTION_CHAGED, &IndirectEventDel);
+    }
+}
+void UMaterialExpressionIndirectTextureSample::NotifyIndirectTextureEvent(const INDIRECT_TEXTURE_EVENT EventType)
+{
+    Material->MarkPackageDirty();
+#if WITH_EDITOR
+    Material->PreEditChange(nullptr);
+    Material->PostEditChange();
+#endif 
 }
 #if WITH_EDITOR 
 int32 UMaterialExpressionIndirectTextureSample::Compile(FMaterialCompiler* Compiler, int32 OutputIndex)

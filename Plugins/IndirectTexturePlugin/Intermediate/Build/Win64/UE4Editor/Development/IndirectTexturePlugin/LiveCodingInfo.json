@@ -2,9 +2,9 @@
 	"RemapUnityFiles": 
 	{
 		"Module.IndirectTexturePlugin.cpp.obj": [
+			"IndirectTexturePlugin.cpp.obj",
 			"GlobalComputeShader.cpp.obj",
 			"IndirectTexture.cpp.obj",
-			"IndirectTexturePlugin.cpp.obj",
 			"IndirectTextureSample.cpp.obj"
 		],
 		"Module.IndirectTexturePlugin.gen.cpp.obj": [

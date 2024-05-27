@@ -3,13 +3,13 @@
 #pragma once 
 #include "CoreMinimal.h" 
 #include "MaterialExpressionIO.h"
-#include "Materials/MaterialExpression.h" 
+#include "Materials/MaterialExpression.h"  
+#include "IndirectTexture.h"
 #include "IndirectTextureSample.generated.h" 
 
 /**
  *
- */
-class UIndirectTexture;
+ */ 
 class UTexture;
 class UMaterial;
 class UMaterialExpressionCustom;
@@ -57,6 +57,8 @@ public:
     UPROPERTY(EditAnywhere, BlueprintGetter = GetIndirectTexture, BlueprintSetter = SetIndirectTexture, Category = "UIndirectTexture")
     UIndirectTexture* IndirectTexture = nullptr;
 private:
+    FIndirectTextureEventDelegate  IndirectEventDel;
+private:
     ExpressionSet Set;
 public:
     ~UMaterialExpressionIndirectTextureSample();
@@ -71,10 +73,14 @@ public:
     bool CanReferenceTexture() const final;
 private:
     bool IsValidTexture(UTexture* Texture)const;
+private:
+    void BeginDestroy() final;
+    void PostLoad() final;
+private:
+    void NotifyIndirectTextureEvent(const INDIRECT_TEXTURE_EVENT EventType);
 public:
 #if WITH_EDITOR 
     int32 Compile(FMaterialCompiler* Compiler, int32 OutputIndex) final; 
-    //void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) final;
 #endif 
 };
 

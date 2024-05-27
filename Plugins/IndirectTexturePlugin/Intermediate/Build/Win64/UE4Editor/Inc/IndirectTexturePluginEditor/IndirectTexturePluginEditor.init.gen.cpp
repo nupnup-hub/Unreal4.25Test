@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeIndirectTexturePluginEditor_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000040,
-				0xEFBDE85B,
-				0x166336A0,
+				0xF6709453,
+				0x0ED3EDB1,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

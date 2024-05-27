@@ -9,7 +9,8 @@
 		],
 		"Module.IndirectTexturePluginEditor.gen.cpp.obj": [
 			"IndirectTextureFactory.gen.cpp.obj",
-			"IndirectTexturePluginEditor.init.gen.cpp.obj"
+			"IndirectTexturePluginEditor.init.gen.cpp.obj",
+			"IndirectTextureThumbnailRenderer.gen.cpp.obj"
 		]
 	}
 }

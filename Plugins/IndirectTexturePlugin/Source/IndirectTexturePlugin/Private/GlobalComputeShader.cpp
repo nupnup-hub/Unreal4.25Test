@@ -78,15 +78,12 @@ bool FIndirectCSHandler::CanExecute()const
 void FIndirectCSHandler::UpdateParameters(const FIndirectCSParameters& NewParameters)
 {
 	Params = NewParameters;
-}
-//Begin the execution of the compute shader each frame
+} 
 bool FIndirectCSHandler::Begin(FIndirectCSDelegate NewExecuteEndDel)
-{
-	//If the handle is already initalized and valid, no need to do anything
+{ 
 	if (OnPostResolvedSceneColorHandle.IsValid())
 		return false;
-	 
-	//Get the Renderer Module and add our entry to the callbacks so it can be executed each frame after the scene rendering is done
+	  
 	const FName RendererModuleName("Renderer");
 	IRendererModule* RendererModule = FModuleManager::GetModulePtr<IRendererModule>(RendererModuleName);
 	if (RendererModule)
@@ -118,7 +115,6 @@ void FIndirectCSHandler::Execute(FRHICommandListImmediate& RHICmdList, class FSc
 	const uint32 ComputeCount = !IsSameResolution ? FMath::Max(abs(log2(SourceSize.X) - log2(RenderTargetSize.X)), abs(log2(SourceSize.Y) - log2(RenderTargetSize.Y))) : 1;
 	 
 	TArray<FIntPoint> RtResolution;
-
 	FIntPoint AllocateRenderTargetSize = SourceSize;
 	EPixelFormat Format = Params.RenderTarget->GetRenderTargetResource()->TextureRHI->GetFormat();
 
@@ -165,18 +161,15 @@ void FIndirectCSHandler::Execute(FRHICommandListImmediate& RHICmdList, class FSc
 		RHICmdList.TransitionResource(EResourceTransitionAccess::ERWBarrier, EResourceTransitionPipeline::EGfxToCompute, CsOutput[OutputIndex]->GetRenderTargetItem().UAV);
 		FComputeShaderUtils::Dispatch(RHICmdList, IndirectCS, PassParameters, CalDispatchGroupDim(RtResolution[i]));
 	}
-	 
-	//Copy shader's output to the render target provided by the client
+	  
 	RHICmdList.CopyTexture(CsOutput[ComputeCount - 1 + RtOffset]->GetRenderTargetItem().ShaderResourceTexture, Params.RenderTarget->GetRenderTargetResource()->TextureRHI, FRHICopyTextureInfo());
 	ExecuteEndDel.Execute();
 } 
 void FIndirectCSHandler::End()
-{
-	//If the handle is not valid then there's no cleanup to do
+{ 
 	if (!OnPostResolvedSceneColorHandle.IsValid())
 		return;
-
-	//Get the Renderer Module and remove our entry from the ResolvedSceneColorCallbacks
+	 
 	const FName RendererModuleName("Renderer");
 	IRendererModule* RendererModule = FModuleManager::GetModulePtr<IRendererModule>(RendererModuleName);
 	if (RendererModule)
